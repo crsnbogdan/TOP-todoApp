@@ -14,4 +14,3 @@ WHAT I'VE LEARNED:
 - further improved my understanding of NPM and Webpack and how to use them
 - how to separate the application functionality logic from the DOM logic
 - implement modules that allow for private and public properties and methods, and that interact with each other
--  
