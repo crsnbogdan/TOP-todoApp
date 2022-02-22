@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    min-height: 100vh;
+}
+
+.flexcolumn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+SIDEBAR AREA
+*/
+
+#sidebar {
+    background-color: #e7e247;
+    width: 25%;
+    padding: 25px;
+}
+
+#sidebar h2 {
+    text-align: center;
+    margin: 40px 0 25px;
+}
+
+#open-projectmodal,
+#todo-addbtn,
+#infosection-editbtn,
+#infosection-deletebtn,
+#submit-newtodo,
+#close-newtodo,
+.todo-edit,
+.todo-delete {
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 60px;
+    margin-left: auto;
+    padding: 15px 25px;
+    text-align: center;
+    border-radius: 50px;
+    border: none;
+    background-color: #e7e247;
+    color: white;
+}
+
+#open-projectmodal {
+    background-color: white;
+    color: #e7e247;
+}
+
+.sidebar-projectname {
+    margin: 25px auto 10px;
+    word-wrap: break-word;
+    display: inline-block;
+    min-width: 150px;
+    max-width: 200px;
+    padding: 20px;
+    border-radius: 50px;
+    background-color: #252420;
+    color: white;
+    font-weight: bold;
+}
+
+
+/*
+TOP AREA
+*/
+
+#project-infosection,
+.todo-instance {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-projectinfoarea {
+    padding: 55px;
+    background-color: #4d5061;
+}
+
+#infosection-projectname {
+    color: #e7e247;
+}
+
+#infosection-projectdescription {
+    color: white;
+}
+
+#infosection-projectdescription {
+    margin-top: 8px;
+    font-weight: 300;
+}
+
+#infosection-editbtn {
+    margin-right: 15px;
+}
+
+#infosection-editbtn:hover,
+#infosection-deletebtn:hover {
+    box-shadow: 0px 5px 10px 3px rgba(5, 7, 9, 0.3);
+    transition-duration: 200ms;
+}
+
+#infosection-editbtn:active,
+#infosection-deletebtn:active {
+    box-shadow: none;
+    transition-duration: 50ms;
+}
+
+
+/*
+MODALS
+*/
+
+button {
+    border: none;
+}
+
+#close-newproject,
+#submit-newproject,
+#submit-editproject,
+#close-editproject,
+#close-newtodo,
+#submit-newtodo,
+#close-edittodo,
+#submit-edittodo {
+    float: left;
+    display: inline;
+    background-color: red;
+}
+
+.newformsection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="date"] {
+    border: none;
+    background-color: #4d5061;
+    color: #e7e247;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+select {
+    border: none;
+    background-color: #4d5061;
+    color: #e7e247;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 10px;
+    border-radius: 25px;
+    width: 100%;
+}
+
+#modal-newproject,
+#modal-editproject,
+#modal-newtodo,
+#modal-edittodo {
+    display: none;
+    position: absolute;
+    background-color: white;
+    color: #4d5061;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 150px;
+    min-width: 400px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+#open-projectmodal:hover,
+.sidebar-projectname:hover {
+    box-shadow: 0px 5px 10px 3px rgba(5, 7, 9, 0.3);
+    transition-duration: 200ms;
+}
+
+#open-projectmodal:active,
+.sidebar-projectname:active {
+    box-shadow: none;
+    transition-duration: 50ms;
+}
+
+.todo-edit,
+.todo-delete {
+    background-color: #252420;
+    color: white;
+    margin-left: 15px;
+    padding: 10px 15px;
+}
+
+#close-newproject,
+#submit-newproject,
+#close-editproject,
+#submit-editproject,
+#close-newtodo,
+#submit-newtodo,
+#close-edittodo,
+#submit-edittodo {
+    margin: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: auto;
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    background-color: #e7e247;
+    color: white;
+}
+
+#close-newproject,
+#close-editproject,
+#close-newtodo,
+#close-edittodo {
+    font-size: 20px;
+    padding: 0;
+    background-color: white;
+    color: #e7e247;
+}
+
+
+/*
+MAIN AREA
+*/
+
+#main-todoarea {
+    margin: 25px;
+}
+
+#main-area {
+    width: 80%;
+    background-color: #252420;
+}
+
+#todo-addbtn {
+    float: right;
+    margin: 25px 55px;
+}
+
+
+/*
+TODOS
+*/
+
+.todo-instance {
+    padding: 25px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+}
+
+.todo-right,
+.todo-left {
+    display: flex;
+    align-items: center;
+}
+
+.todo-name {
+    color: white;
+    font-size: 16px;
+}
+
+.todo-date {
+    color: white;
+    font-size: 14px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>To do app</title>
+    <script src=".\main.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="sidebar" class="flexcolumn-container">
+            <h2>PROJECTS</h2>
+            <button id="open-projectmodal">ADD</button>
+            <div id="sidebar-projectnames" class="flexcolumn-container">
+
+            </div>
+        </div>
+        <div id="main-area" class="flexcolumn-container">
+            <div id="main-projectinfoarea">
+                <div id="project-infosection">
+                    <div id="infosection-container">
+                        <h3 id="infosection-projectname"></h3>
+                        <p id="infosection-projectdescription"></p>
+                    </div>
+                    <div id="infosection-rightcontainer">
+                        <button id="infosection-editbtn">EDIT</button>
+                        <button id="infosection-deletebtn">DELETE</button>
+
+                    </div>
+                </div>
+            </div>
+            <div id="todoarea-add">
+                <button id="todo-addbtn">ADD</button>
+            </div>
+            <div id="main-todoarea" class="flexcolumn-container">
+            </div>
+        </div>
+        <div id="modal-newproject" class="flexcolumn-container">
+            <button id="close-newproject">X</button>
+            <form action="">
+                <div class="newformsection">
+                    <label>NAME</label>
+                    <input type="text" id="input-newprojectname" required>
+                </div>
+                <div class="newformsection">
+                    <label>DESCRIPTION</label>
+                    <input type="text" id="input-newprojectdescription" required>
+                </div>
+            </form>
+            <button id="submit-newproject">SUBMIT</button>
+        </div>
+        <div id="modal-editproject" class="flexcolumn-container">
+            <button id="close-editproject">X</button>
+            <form action="">
+                <div class="newformsection">
+                    <label>NAME</label>
+                    <input type="text" id="input-editprojectname" required>
+                </div>
+                <div class="newformsection">
+                    <label>DESCRIPTION</label>
+                    <input type="text" id="input-editprojectdescription" required>
+                </div>
+            </form>
+            <button id="submit-editproject">SUBMIT</button>
+        </div>
+
+        <div id="modal-newtodo" class="flexcolumn-container">
+            <button id="close-newtodo">X</button>
+            <form action="">
+                <div class="newformsection">
+                    <label>NAME</label>
+                    <input type="text" id="input-newtodoname" required>
+                </div>
+                <div class="newformsection">
+                    <label>PRIORITY</label>
+                    <select name="newtodopriority" id="input-newtodopriority">
+                        <option value="LOW">LOW</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="HIGH">HIGH</option>
+                    </select>
+                </div>
+                <div class="newformsection">
+                    <label>DUE DATE</label>
+                    <input type="date" id="input-newtododuedate" min="2022-01-01" required>
+                </div>
+                <div class="newformsection">
+                    <label>STATUS</label>
+                    <select name="newtodostatus" id="input-newtodostatus">
+                        <option value="notcompleted">NOT COMPLETED</option>
+                        <option value="completed">COMPLETED</option>
+                    </select>
+                </div>
+            </form>
+            <button id="submit-newtodo">SUBMIT</button>
+        </div>
+        <div id="modal-edittodo" class="flexcolumn-container">
+            <button id="close-edittodo">X</button>
+            <form action="">
+                <div class="newformsection">
+                    <label>NAME</label>
+                    <input type="text" id="input-edittodoname" required>
+                </div>
+                <div class="newformsection">
+                    <label>PRIORITY</label>
+                    <select name="edittodopriority" id="input-edittodopriority" required>
+                        <option value="LOW">LOW</option>
+                        <option value="MEDIUM">MEDIUM</option>
+                        <option value="HIGH">HIGH</option>
+                    </select>
+                </div>
+                <div class="newformsection">
+                    <label>DUE DATE</label>
+                    <input type="date" id="input-edittododuedate" min="2022-01-01" required>
+                </div>
+                <div class="newformsection">
+                    <label>STATUS</label>
+                    <select name="edittodostatus" id="input-edittodostatus">
+                        <option value="notcompleted">NOT COMPLETED</option>
+                        <option value="completed">COMPLETED</option>
+                    </select>
+                </div>
+            </form>
+            <button id="submit-edittodo">SUBMIT</button>
+        </div>
+    </main>
+</body>
+
+</html>
